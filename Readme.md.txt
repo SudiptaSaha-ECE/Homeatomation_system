@@ -1,129 +1,134 @@
-🏠 Home Automation System using ESP8266 & Blynk IoT
+# 🏠 Home Automation System using ESP8266 & Blynk IoT
 
-A simple IoT-based Home Automation System that allows users to control home appliances remotely from anywhere in the world using a smartphone.
-The system is built using ESP8266 (NodeMCU), a 2-Channel Relay Module, and the Blynk IoT Cloud Platform.
+A simple **IoT-based Home Automation System** that allows users to control home appliances **remotely from anywhere in the world** using a smartphone.  
+The system is built using **ESP8266 (NodeMCU)**, a **2-Channel Relay Module**, and the **Blynk IoT Cloud Platform**.
 
-📌 Project Overview
+---
 
-This project demonstrates how IoT can be used to automate and control electrical appliances such as lights and fans using a mobile application.
+## 📌 Project Overview
+
+This project demonstrates how IoT can be used to automate and control electrical appliances such as lights and fans using a mobile application.  
 The ESP8266 connects to Wi-Fi and communicates with the Blynk Cloud, allowing real-time control through the Blynk mobile app.
 
-🚀 Features
+---
 
-Control two electrical appliances remotely
+## 🚀 Features
 
-Works over Wi-Fi (Internet-based control)
+- Control **two electrical appliances** remotely  
+- Works over **Wi-Fi (Internet-based control)**  
+- Real-time response using **Blynk IoT Cloud**  
+- Simple and low-cost hardware  
+- Can be expanded to more appliances  
 
-Real-time response using Blynk IoT Cloud
+---
 
-Simple and low-cost hardware
+## 🛠️ Components Used
 
-Can be expanded to more appliances
+| Component | Quantity |
+|---------|----------|
+| ESP8266 (NodeMCU) | 1 |
+| 2-Channel Relay Module | 1 |
+| AC Load (Bulb/Fan for testing) | 2 |
+| Jumper Wires | As required |
+| Power Supply (5V) | 1 |
 
-🛠️ Components Used
-Component	Quantity
-ESP8266 (NodeMCU)	1
-2-Channel Relay Module	1
-AC Load (Bulb/Fan for testing)	2
-Jumper Wires	As required
-Power Supply (5V)	1
-🔌 Circuit Connections
-Relay Module to ESP8266
-Relay Pin	ESP8266 Pin
-IN1	D1
-IN2	D2
-VCC	VIN / 5V
-GND	GND
+---
 
-⚠️ Warning:
-Be extremely careful while working with AC mains voltage. Improper handling can cause serious injury.
+## 🔌 Circuit Connections
 
-📱 Blynk App Configuration
+### Relay Module to ESP8266
 
-Create a project in Blynk IoT Console
+| Relay Pin | ESP8266 Pin |
+|----------|------------|
+| IN1 | D1 |
+| IN2 | D2 |
+| VCC | VIN / 5V |
+| GND | GND |
 
-Select ESP8266 as the device
+> ⚠️ **Warning:**  
+> Be extremely careful while working with **AC mains voltage**. Improper handling can cause serious injury.
 
-Note down:
+---
 
-Auth Token
+## 📱 Blynk App Configuration
 
-Template ID
+1. Create a project in **Blynk IoT Console**
+2. Select **ESP8266** as the device
+3. Note down:
+   - **Auth Token**
+   - **Template ID**
+4. Add two **Button Widgets**
+   - Button 1 → Virtual Pin **V1**
+   - Button 2 → Virtual Pin **V2**
+5. Set button mode to **Switch**
 
-Add two Button Widgets
+---
 
-Button 1 → Virtual Pin V1
+## 💻 Software Requirements
 
-Button 2 → Virtual Pin V2
+- Arduino IDE  
+- ESP8266 Board Package  
+- Blynk Library  
+- USB Cable  
 
-Set button mode to Switch
+---
 
-💻 Software Requirements
+## 🧠 Working Principle
 
-Arduino IDE
+1. ESP8266 connects to the Wi-Fi network  
+2. Blynk App sends control commands via the Blynk Cloud  
+3. ESP8266 receives commands and switches the relay ON/OFF  
+4. Relay controls the connected electrical appliances  
 
-ESP8266 Board Package
+---
 
-Blynk Library
+## 📂 Project Structure
 
-USB Cable
-
-🧠 Working Principle
-
-ESP8266 connects to the Wi-Fi network.
-
-Blynk App sends control commands via the Blynk Cloud.
-
-ESP8266 receives commands and switches the relay ON/OFF.
-
-Relay controls the connected electrical appliances.
-
-📂 Project Structure
 Home-Automation-ESP8266/
 │
 ├── Code/
-│   └── home_automation.ino
+│ └── home_automation.ino
 │
 ├── Circuit_Diagram/
-│   └── circuit.png
+│ └── circuit.png
 │
 ├── README.md
 
-🔧 How to Upload Code
 
-Open Arduino IDE
+---
 
-Install ESP8266 Board Manager
+## 🔧 How to Upload Code
 
-Install Blynk Library
+1. Open Arduino IDE  
+2. Install ESP8266 Board Manager  
+3. Install Blynk Library  
+4. Update Wi-Fi credentials and Blynk credentials in code  
+5. Select correct COM port and board  
+6. Upload the code  
 
-Update Wi-Fi credentials and Blynk credentials in code
+---
 
-Select correct COM port and board
+## 📈 Future Improvements
 
-Upload the code
+- Add voice control using Google Assistant  
+- Add energy monitoring  
+- Increase relay channels  
+- Integrate sensors (temperature, motion, gas)  
 
-📈 Future Improvements
+---
 
-Add voice control using Google Assistant
+## 👨‍💻 Author
 
-Add energy monitoring
+**Sudipta Saha**  
+Diploma in Electronics & Telecommunication Engineering  
 
-Increase relay channels
+---
 
-Integrate sensors (temperature, motion, gas)
-
-👨‍💻 Author
-
-Sudipta Saha
-Diploma in Electronics & Telecommunication Engineering
-
-⭐ Support
+## ⭐ Support
 
 If you like this project:
 
-⭐ Star this repository
+- ⭐ Star this repository  
+- 🍴 Fork it  
+- 🧠 Learn and improve it  
 
-🍴 Fork it
-
-🧠 Learn and improve it
